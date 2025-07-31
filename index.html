@@ -3,116 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terbilang Angka</title>
-    <style>
-        /* Atur tampilan dasar halaman */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Kontainer utama yang memegang input dan hasil */
-        .container {
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* Judul halaman */
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        /* Styling input agar lebih rapi dan center */
-        input {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 10px;
-            font-size: 16px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            transition: border-color 0.3s;
-            text-align: center;
-            max-width: 350px;
-        }
-
-        /* Efek ketika input fokus */
-        input:focus {
-            border-color: #007BFF;
-            outline: none;
-        }
-
-        /* Kolom hasil yang terpusat dan mendukung multiline */
-        .result-box {
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            border: 2px solid #ccc;
-            border-radius: 8px;
-            background-color: #f1f1f1;
-            margin-top: 10px;
-            font-weight: bold;
-            color: #007BFF;
-            text-align: center;
-            display: block;
-            resize: none;
-            height: auto;
-            max-width: 350px;
-            line-height: 1.4;
-            word-spacing: -0.1em;
-        }
-
-        /* Tombol salin */
-        .copy-btn {
-            background-color: #007BFF;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 8px;
-            margin-top: 10px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-        }
-
-        /* Hover efek tombol salin */
-        .copy-btn:hover {
-            background-color: #0056b3;
-        }
-
-        /* Footer di bawah */
-        .footer {
-            text-align: center;
-            margin-top: 15px;
-            font-size: 12px;
-            color: #777;
-        }
-    </style>
+    <title>Konversi Angka ke Terbilang</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <div class="container">
-        <h1>Konversi Angka ke Terbilang</h1>
-        <input type="text" id="inputNumber" placeholder="Masukkan angka" />
-        <!-- Kolom hasil tambahan dengan textarea -->
-        <textarea id="result-box" class="result-box" readonly>Hasil terbilang akan muncul di sini</textarea>
-        <!-- Tombol Copy -->
-        <button class="copy-btn" id="copyBtn">Salin Hasil</button>
-        <div class="footer">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+    <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full text-center flex flex-col items-center">
+        <h1 class="text-3xl font-bold text-gray-800 mb-6">Konversi Angka ke Terbilang</h1>
+        
+        <input 
+            type="text" 
+            id="inputNumber" 
+            placeholder="Masukkan angka" 
+            class="w-full p-3 mb-4 text-lg border-2 border-gray-300 rounded-lg focus:outline-none focus:border-blue-500 text-center"
+        />
+        
+        <textarea 
+            id="result-box" 
+            class="w-full p-3 text-lg border-2 border-gray-300 rounded-lg bg-gray-50 mt-2 font-semibold text-blue-600 text-center resize-none h-auto leading-relaxed" 
+            readonly
+        >Hasil terbilang akan muncul di sini</textarea>
+        
+        <button 
+            id="copyBtn" 
+            class="bg-blue-600 text-white px-6 py-3 rounded-lg mt-4 hover:bg-blue-700 transition duration-300 ease-in-out text-lg font-medium"
+        >
+            Salin Hasil
+        </button>
+        
+        <div class="text-sm text-gray-500 mt-6">
             © 2024 Terbilang Converter
         </div>
     </div>
